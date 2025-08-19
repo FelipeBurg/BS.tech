@@ -1,0 +1,339 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4CAF50; /* Verde, inspirado na identidade */
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+.btn-orcamento {
+    background-color: #FF5722; /* Laranja, inspirado na identidade */
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
+/* Seção Home */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 5%;
+    background-image: linear-gradient(135deg, #FFD166, #FF9800, #F44336); /* Gradiente, inspirado na imagem */
+    color: #fff;
+    text-align: center;
+}
+
+#home .text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+#home .text-content h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+#home .text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-vamos-comecar {
+    background-color: #fff;
+    color: #FF5722;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+#home .image-content {
+    flex: 1;
+    display: none; /* Em telas menores, a imagem pode ser escondida */
+}
+
+@media (min-width: 768px) {
+    #home {
+        text-align: left;
+    }
+    #home .text-content {
+        text-align: left;
+    }
+    #home .image-content {
+        display: block;
+    }
+}
+
+/* Seção de Serviços */
+#servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 350px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.service-card p {
+    color: #666;
+}
+
+.btn-explorar {
+    background-color: #4CAF50;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Seção Quem Somos */
+#quem-somos {
+    padding: 60px 5%;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-direction: column;
+}
+
+.content-row .text-content {
+    flex: 1;
+}
+
+.content-row .image-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.content-row .image-content img {
+    width: 100%;
+    height: auto;
+}
+
+.text-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-block p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .content-row {
+        flex-direction: row;
+    }
+}
+
+/* Seção Conquiste o Digital */
+#conquiste-digital {
+    padding: 60px 5%;
+    background-color: #f0f0f0;
+}
+
+.header-image {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.header-image h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2.5rem;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.text-content h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #333;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Seção Depoimento */
+#depoimento {
+    padding: 60px 5%;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.depoimento-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.author {
+    font-weight: 600;
+    color: #4CAF50;
+}
+
+/* Seção Contato */
+#contato {
+    padding: 60px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#contato p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contato label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#contato input, #contato textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contato textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contato button {
+    background-color: #4CAF50;
+    color: #fff;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 5%;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FF5722;
+}
+
+.social-media h3 {
+    margin: 20px 0 10px;
+}

@@ -3,146 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/header.css">
-    <link rel="stylesheet" href="/src/styles/home.css">
-    <link rel="stylesheet" href="/src/styles/apresentacao.css">
-    <link rel="stylesheet" href="/src/styles/sabermais.css">
     <title>BS.tech</title>
+    <!-- Inclui a biblioteca de fontes Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Inclui o CDN do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Definição de cores personalizadas para o Tailwind, baseadas nas cores do PDF */
+        .gradient-bg {
+            background-image: linear-gradient(135deg, #FFD166, #FF9800, #F44336);
+        }
+        .text-bs-orange { color: #FF5722; }
+        .bg-bs-orange { background-color: #FF5722; }
+        .text-bs-green { color: #4CAF50; }
+        .bg-bs-green { background-color: #4CAF50; }
+        .border-bs-green { border-color: #4CAF50; }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="/src/images/Logo.png" alt="Logo">
-            <span>&ltBS.tech&gt</span>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Cabeçalho (Header) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md rounded-b-xl">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0">
+                <span class="text-3xl font-bold text-bs-green">&ltBS.tech/&gt</span>
+            </div>
+            <!-- Menu de navegação e botão de orçamento visíveis em todas as telas -->
+            <nav class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-gray-600 font-medium">
+                <a href="#servicos" class="hover:text-bs-green transition-colors">Serviços</a>
+                <a href="#quem-somos" class="hover:text-bs-green transition-colors">Quem somos</a>
+                <a href="#contato" class="hover:text-bs-green transition-colors">Contato</a>
+            </nav>
+            <button class="bg-bs-orange text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform hover:scale-105 mt-4 md:mt-0">
+                Orçamento
+            </button>
         </div>
-        <nav>
-            <a href="#servicos">Serviços</a>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-        <button class="btn-orcamento">Orçamento</button>
     </header>
+
     <main>
-        <section class="home">
-            <article class="textInit">
-
-                <h1>BEM-VINDO<br>AO FUTURO</h1>
-                <h2>O futuro é agora.<br> Transforme seu negócio com tecnologia e <br>não fique para trás</h2>
-                <button class="btn-VamosComecar">VAMOS COMEÇAR</button>
-            </article>
-            <article class="imagem-init">
-                <img src="/src/images/Home_Jovens.png" alt="Jovens tirando selfie">
-            </article>
-        </section>
-
-        <section class="services">
-            <article class="automation">
-                <h1>Automação de <br> chat</h1>
-                <p>
-                    Ganhe tempo automatizando seu<br>
-                    inbox! Implementamos chatbots<br>
-                    conectados ao Trello para organizar pedidos e agilizar <br>
-                    seu atendimento. 
-                </p>
-            </article>
-            <article class="Sites">
-                <h1>Sites e Aplicativos</h1>
-                <p>
-                    Destaque seu negócio no mundo digital!<br>
-                    Criamos sites modernos e aplicativos<br>
-                     para você vender mais e atrair clientes.
-                </p>
-
-                <button class="btn-Explorar">Explorar</button>
-            </article>
-            
-            <article class="Email">
-                <h1>E-mail<br>Marketing</h1>
-                <p>Fortaleça seu relacionamento<br>
-                    com clientes! Criamos <br>
-                    campanhas de e-mail <span>estratégicas</span>.</p>
-            </article>
-        </section>
-        <section class="SaberMais">
-            <article class="Texto1">
-                <h2>
-                    <span>Não sabe por onde começar?</span>
-                    Analisamos suas necessidades e 
-                    criamos soluções sob medida para 
-                    impulsionar seu negócio.
-                </h2>
-                <button class="Contato">Contato</button>
-            </article>
-            <article class="Texto2">
-                <img src="/src/images/ProjetoSobMedida.png" alt="Jovens Construindo um projeto">
-                <p><span></span> o seu negócio com tecnologia,</span>
-                     independentemente do tamanho ou segmento,
-                     de padarias a barbearias. Automatize processos,
-                     fortaleça sua presença digital e otimize seu atendimento
-                     para atrair mais clientes e aumentar
-                     suas vendas. Nossa missão é transformar
-                     sua operação com soluções inovadoras e acessíveis! </p>
-            </article>
-        </section>
-       <section class="apresentacao">
-            <article class="fraseMarcante">
-                <h1>Digitalize.
-                    Cresça.
-                    Inove.
+        <!-- Seção Home (Bem-vindo ao Futuro) -->
+        <section id="home" class="gradient-bg flex flex-col-reverse md:flex-row items-center justify-center text-center md:text-left py-16 md:py-24 px-4 min-h-screen">
+            <div class="max-w-xl mx-auto md:mr-10 text-white p-4 rounded-xl">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+                    BEM-VINDO<br>AO FUTURO
                 </h1>
-                <img src="/src/images/Acordo.png" alt="Pessoas fazendo um acordo">
-            </article>
-       </section>
-       <section class="apresentacoes">
-            <article class="Informacoes">
-                <h2>Conquiste o Digital</h2>
-                <p>
-                    Você sempre sonhou em tirar aquele projeto do papel? Quer fazer
-                    seu negócio crescer, mas não sabe por onde começar? Como
-                    atrair mais clientes e ganhar mais visibilidade?
-                    A resposta está na maior vitrine do mundo: a internet. Com a 
-                    estratégia certa, seu negócio pode alcançar o público ideal,
-                    crescer de forma sustentável e se destacar no mercado, vamos
-                    juntos transformar sua ideia em realidade
+                <p class="text-lg md:text-xl mb-8">
+                    O futuro é agora. Transforme seu negócio com tecnologia e não fique para trás
+                </p>
+                <a href="#contato" class="bg-white inline-block text-bs-orange font-semibold py-3 px-8 rounded-full shadow-lg transition-transform hover:scale-105">
+                    VAMOS COMEÇAR
+                </a>
+            </div>
+            <div class="mt-8 md:mt-0 w-full md:w-1/2 lg:w-1/3 p-4 rounded-xl">
+                <!-- Placeholder para a imagem da primeira página do PDF -->
+                <img src="https://placehold.co/600x600/FFD166/ffffff?text=Imagem+Página+1" alt="Jovens com smartphones" class="rounded-xl shadow-lg w-full h-auto">
+            </div>
+        </section>
+
+        <!-- Seção de Serviços -->
+        <section id="servicos" class="container mx-auto py-16 px-4 min-h-screen flex flex-col items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center mb-8">
+                <!-- Card de Automação de Chat -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                    <!-- Placeholder para a imagem de Automação de Chat da página 2 -->
+                    <img src="https://placehold.co/300x250/FF5722/ffffff?text=Automação+Chat" alt="Ilustração de chatbot" class="w-full h-auto mb-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-2">Automação de chat</h3>
+                    <p class="text-gray-700">
+                        Ganhe tempo automatizando seu inbox! Implementamos chatbots conectados ao Trello para organizar pedidos e agilizar seu atendimento.
+                    </p>
+                </div>
+                <!-- Card de Sites e Aplicativos -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                    <!-- Placeholder para a imagem de Sites e Aplicativos da página 2 -->
+                    <img src="https://placehold.co/300x250/4CAF50/ffffff?text=Sites+e+Apps" alt="Ilustração de site e aplicativo" class="w-full h-auto mb-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-2">Sites e aplicativos</h3>
+                    <p class="text-gray-700">
+                        Destaque seu negócio no mundo digital! Criamos sites modernos e aplicativos para você vender mais e atrair clientes.
+                    </p>
+                </div>
+                <!-- Card de E-mail Marketing -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                    <!-- Placeholder para a imagem de E-mail Marketing da página 2 -->
+                    <img src="https://placehold.co/300x250/F44336/ffffff?text=Email+Marketing" alt="Ilustração de e-mail marketing" class="w-full h-auto mb-6 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-2">E-mail Marketing</h3>
+                    <p class="text-gray-700">
+                        Fortaleça seu relacionamento com clientes! Criamos campanhas de e-mail estratégicas.
+                    </p>
+                </div>
+            </div>
+            <button class="bg-gray-900 text-white font-semibold py-3 px-12 rounded-full shadow-lg transition-transform hover:scale-105 mt-4">
+                EXPLORAR
+            </button>
+        </section>
+
+        <!-- Seção Quem Somos (Soluções Sob Medida) -->
+        <section id="quem-somos" class="bg-gray-100 text-gray-900 py-16 px-4 min-h-screen flex items-center justify-center">
+            <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-12">
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                        Não sabe por onde<br>começar?
+                    </h2>
+                    <p class="text-gray-700 text-lg mb-8">
+                        Analisamos suas necessidades e criamos soluções sob medida para impulsionar seu negócio.
+                    </p>
+                    <button class="bg-bs-green text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform hover:scale-105">
+                        CONTATO
+                    </button>
+                    <p class="text-gray-700 text-sm mt-8">
+                        Impulsionamos o seu negócio com tecnologia, independentemente do tamanho ou segmento, de padarias a barbearias. Automatize processos, fortaleça sua presença digital e otimize seu atendimento para atrair mais clientes e aumentar suas vendas. Nossa missão é transformar sua operação com soluções inovadoras e acessíveis!
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-2/5">
+                    <!-- Placeholder para a imagem de "Não sabe por onde começar?" da página 3 -->
+                    <img src="https://placehold.co/600x400/222222/ffffff?text=Soluções+Sob+Medida" alt="Pessoas montando um quebra-cabeça" class="w-full h-auto rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção "Conquiste o Digital" -->
+        <section class="bg-white py-16 px-4 min-h-screen flex items-center justify-center">
+            <div class="container mx-auto text-center">
+                <!-- Seção "Digitalize. Cresça. Inove." -->
+                <div class="relative w-full max-w-4xl mx-auto mb-12">
+                    <div class="bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                        <div class="flex flex-col text-white font-extrabold text-center leading-tight">
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl">Digitalize.</h1>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl">Cresça.</h1>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl">Inove.</h1>
+                        </div>
+                        <img src="https://placehold.co/600x400/E8E8E8/666666?text=Acordo" alt="Pessoas fazendo um acordo" class="w-full md:w-1/2 h-auto rounded-2xl shadow-lg">
+                    </div>
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Conquiste o Digital</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto mb-8">
+                    Você sempre sonhou em tirar aquele projeto do papel? Quer fazer seu negócio crescer, mas não sabe por onde começar? Como atrair mais clientes e ganhar visibilidade? A resposta está na maior vitrine do mundo: a internet. Com a estratégia certa, seu negócio pode alcançar o público ideal, crescer de forma sustentável e se destacar no mercado. Vamos juntos transformar sua ideia em realidade!
+                </p>
+                
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Por que a BS.tech?</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto mb-8">
+                    Como somos da região, sabemos o que é preciso para chamar o público certo, sabemos os problemas dos negócios e visando mudar esta realidade, criamos a BS.tech, que tal alguém que te entende, ajudando você a crescer?
                 </p>
 
-                <h2>Por que a B&S.tech?</h2>
-                <p>
-                    Como somos da região, sabemos o que é preciso para chamar o
-                    público certo, sbemos os problemas dos negócios e visando mudar esta realidade,
-                    criamos a B&S.tech, que tal alguém que te entende, ajudando você a crescer?
-
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Excelente suporte ao cliente</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">
+                    Começamos nossa jornada este ano com um propósito claro: inovar e ajudar negócios a crescerem. Sabemos que um bom suporte faz toda diferença, e é por isso que, mesmo uma empresa nova, estamos 100% focados em você. Aqui você nunca estará sozinho, nossa equipe estará ao seu lado sempre que precisar!
                 </p>
+            </div>
+        </section>
 
-                <h2>Excelente suporte 
-                    ao cliente</h2>
-                <p>
-                    Começamos nossa jornada este ano com um propósito claro:
-                    inovar e ajudar negócios a crescerem. Sabemos que um bom
-                    suporte faz toda diferença, e é por isso que, mesmo uma
-                    empresa nova, estamos 100% focados em você. Aqui você nunca
-                    estará sozinho, nossa equipe estará ao seu lado sempre que precisar!
+        <!-- Seção de Depoimento -->
+        <section id="depoimento" class="bg-gray-100 py-16 px-4 min-h-screen flex items-center justify-center">
+            <div class="container mx-auto max-w-2xl text-center p-8 rounded-2xl shadow-xl bg-white">
+                <!-- Placeholder para a imagem de Cristian Moraes da página 5 -->
+                <img src="https://placehold.co/150x150/4CAF50/ffffff?text=Cristian+Moraes" alt="Cristian Moraes" class="rounded-full mx-auto -mt-20 border-8 border-white shadow-lg mb-8">
+                <p class="italic text-lg text-gray-700 leading-relaxed mb-4">
+                    "Com a automação do WhatsApp, não preciso mais interromper meu trabalho para responder clientes na hora. Agora, meu atendimento ficou mais ágil e meu serviço flui muito melhor!"
                 </p>
-            </article>
-       </section>
-       <section class="clientes">
-        
-        <article class="avaliacao">
-            <h3>"Com a automação do WhatsApp,
-                não preciso mais interromper meu
-                trabalho para responder clientes
-                na hora. Agora, meu atendimento
-                ficou mais ágil e meu serviço flui
-                muito melhor!" 
-            </h3>
-            <h4>Cristian Moraes, proprietário da AutoElétrica Moraes</h4>
-        </article>
-        <article class="cliente">
+                <p class="font-semibold text-bs-green text-sm">
+                    Cristian Moraes, proprietário da AutoElétrica Moraes
+                </p>
+            </div>
+        </section>
 
-        </article>
-       </section>
-       
-        
+        <!-- Seção de Contato -->
+        <section id="contato" class="bg-gray-50 py-16 px-4 min-h-screen flex items-center justify-center">
+            <div class="container mx-auto max-w-xl text-center">
+                <h2 class="text-4xl font-bold mb-4">Entre em contato</h2>
+                <p class="text-gray-700 mb-8">
+                    Preencha o formulário e entraremos em contato para impulsionar seu negócio juntos.
+                </p>
+                <form class="bg-white p-8 rounded-2xl shadow-xl text-left">
+                    <div class="mb-4">
+                        <label for="nome" class="block text-gray-700 font-semibold mb-2">SEU NOME</label>
+                        <input type="text" id="nome" name="nome" placeholder="FELIPE" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-bs-green" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="telefone" class="block text-gray-700 font-semibold mb-2">TELEFONE</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-bs-green" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">E-MAIL</label>
+                        <input type="email" id="email" name="email" placeholder="felipe@gmail.com" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-bs-green" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="servico" class="block text-gray-700 font-semibold mb-2">SERVIÇO</label>
+                        <input type="text" id="servico" name="servico" placeholder="Automação" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-bs-green" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="mensagem" class="block text-gray-700 font-semibold mb-2">MENSAGEM</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" class="w-full p-3 border border-gray-300 rounded-lg resize-y focus:outline-none focus:border-bs-green" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-bs-orange text-white font-semibold py-3 rounded-full shadow-lg transition-transform hover:scale-105">
+                        ENVIAR
+                    </button>
+                </form>
+            </div>
+        </section>
+
     </main>
-    </body>
+</body>
 </html>
